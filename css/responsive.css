@@ -1,0 +1,480 @@
+/* ============================================
+   Ankersten Consult AS - Responsive Styles
+   ============================================ */
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+}
+
+/* Desktop (1024px - 1199px) */
+@media (max-width: 1199px) {
+    :root {
+        --text-4xl: 2.25rem;
+        --text-3xl: 1.75rem;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    :root {
+        --text-4xl: 2rem;
+        --text-3xl: 1.5rem;
+        --text-2xl: 1.25rem;
+        --space-4xl: 4rem;
+        --space-3xl: 3rem;
+    }
+
+    /* Navigation */
+    .nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--space-xl);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform var(--transition-base), opacity var(--transition-base), visibility var(--transition-base);
+    }
+
+    .nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav__link {
+        display: block;
+        padding: var(--space-md);
+        border-bottom: 1px solid var(--color-grey-light);
+    }
+
+    .nav__cta {
+        width: 100%;
+        margin-top: var(--space-md);
+    }
+
+    .nav__cta .btn {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero__stats {
+        gap: var(--space-xl);
+    }
+
+    /* Intro */
+    .intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .intro__image {
+        order: -1;
+    }
+
+    .intro__image-accent {
+        bottom: -20px;
+        left: -20px;
+    }
+
+    /* Services Overview */
+    .services-overview {
+        grid-template-columns: 1fr;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Problems/Solutions */
+    .problems-solutions {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Service Area */
+    .service-area {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .service-area__map {
+        order: -1;
+        min-height: 300px;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2xl);
+    }
+
+    .footer__brand {
+        grid-column: span 2;
+        max-width: 100%;
+    }
+
+    /* About Page */
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-intro__image {
+        order: -1;
+    }
+
+    .founder-section {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-section {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Cabin Page */
+    .cabin-intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .cabin-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .local-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .map-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services Page */
+    .service-detail {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .pricing-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    :root {
+        --text-4xl: 1.75rem;
+        --text-3xl: 1.375rem;
+        --text-2xl: 1.125rem;
+        --text-xl: 1rem;
+        --space-4xl: 3rem;
+        --space-3xl: 2rem;
+        --space-2xl: 1.5rem;
+        --header-height: 70px;
+    }
+
+    /* Header */
+    .header__logo-tagline {
+        display: none;
+    }
+
+    .header__logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__logo-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: var(--space-3xl) 0;
+    }
+
+    .hero__title {
+        font-size: clamp(1.75rem, 6vw, 2.25rem);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .hero__stats {
+        flex-direction: column;
+        gap: var(--space-lg);
+        text-align: center;
+    }
+
+    .hero__stat {
+        text-align: center;
+    }
+
+    /* Quick Contact */
+    .quick-contact__inner {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Service Area List */
+    .service-area__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA Section */
+    .cta-section__actions {
+        flex-direction: column;
+    }
+
+    .cta-section__actions .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer__brand {
+        grid-column: span 1;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer__legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Page Headers */
+    .page-header {
+        padding: var(--space-2xl) 0;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services Page */
+    .service-detail__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Founder */
+    .founder-experience ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cabin Services */
+    .cabin-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Consultation CTA */
+    .consultation-cta__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Contact Hours */
+    .contact-hours__item {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+}
+
+/* Small Mobile (max-width: 479px) */
+@media (max-width: 479px) {
+    :root {
+        --text-4xl: 1.5rem;
+        --text-3xl: 1.25rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .btn {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--text-sm);
+    }
+
+    .btn--large {
+        padding: var(--space-md) var(--space-xl);
+        font-size: var(--text-base);
+    }
+
+    /* Cards */
+    .service-category,
+    .cabin-service-card,
+    .value-card {
+        padding: var(--space-lg);
+    }
+
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+
+    .consultation-cta {
+        padding: var(--space-lg);
+    }
+
+    /* Intro Image Accent */
+    .intro__image-accent {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: var(--space-md);
+        width: 100%;
+    }
+}
+
+/* Hover States for Touch Devices */
+@media (hover: none) {
+    .btn:hover {
+        transform: none;
+    }
+
+    .service-category:hover,
+    .cabin-service-card:hover,
+    .value-card:hover {
+        transform: none;
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .quick-contact,
+    .cta-section,
+    .hero__actions,
+    .btn {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    .hero {
+        margin-top: 0;
+        background: none;
+        color: #000;
+        min-height: auto;
+        padding: 1cm 0;
+    }
+
+    .hero__content {
+        color: #000;
+    }
+
+    .hero__title,
+    .hero__subtitle {
+        color: #000;
+    }
+
+    .section {
+        padding: 1cm 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
